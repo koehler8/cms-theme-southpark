@@ -1,6 +1,6 @@
 {
   "name": "@koehler8/cms-theme-southpark",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Alpine Dawn theme for Vertex CMS — warm light palette with orange/blue/green accents",
   "author": "koehler8",
   "license": "MIT",
@@ -27,8 +27,5 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/koehler8/cms-theme-southpark.git"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
   }
 }
