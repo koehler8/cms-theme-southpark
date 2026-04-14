@@ -2,7 +2,13 @@
   "name": "@koehler8/cms-theme-southpark",
   "version": "1.0.1",
   "description": "Alpine Dawn theme for @koehler8/cms — warm light palette with orange/blue/green accents",
+  "author": "koehler8",
   "license": "MIT",
+  "keywords": ["cms", "theme", "koehler8", "southpark", "alpine"],
+  "homepage": "https://github.com/koehler8/cms-theme-southpark#readme",
+  "bugs": {
+    "url": "https://github.com/koehler8/cms-theme-southpark/issues"
+  },
   "type": "module",
   "exports": {
     ".": "./index.js",
@@ -12,7 +18,8 @@
     "index.js",
     "theme.config.js",
     "theme.css",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "peerDependencies": {
     "@koehler8/cms": "^1.0.0-beta.1"

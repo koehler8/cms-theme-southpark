@@ -1,7 +1,7 @@
 # @koehler8/cms-theme-southpark — Alpine Dawn
 
 - **Slug**: `southpark`
-- **Version**: 1.0.0
+- **Version**: 1.0.1
 - **Author**: koehler8
 
 ## Install
@@ -34,3 +34,11 @@ Set `site.theme` to `"southpark"` in your site config. If CDN font access is res
 ## Compatibility Notes
 - Great for playful consumer drops or outdoor-inspired brands; pair with photography or illustrated scenery.
 - The theme sets background-attachment fixed on `body` to keep gradients anchored—avoid layering conflicting site-level backgrounds unless you remove or override that rule.
+
+## Contributing
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
+
+## License
+
+[MIT](./LICENSE)
