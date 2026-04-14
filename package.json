@@ -1,7 +1,7 @@
 {
   "name": "@koehler8/cms-theme-southpark",
   "version": "1.0.1",
-  "description": "Alpine Dawn theme for @koehler8/cms — warm light palette with orange/blue/green accents",
+  "description": "Alpine Dawn theme for Vertex CMS — warm light palette with orange/blue/green accents",
   "author": "koehler8",
   "license": "MIT",
   "keywords": ["cms", "theme", "koehler8", "southpark", "alpine"],
