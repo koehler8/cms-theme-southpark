@@ -1,0 +1,801 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;600;700&display=swap');
+
+:root[data-site-theme="southpark"] {
+  --brand-neon-pink: #f26938;
+  --brand-crimson-red: #c24136;
+  --brand-sultry-purple: #4a5b75;
+  --brand-electric-blue: #6ec7f7;
+  --brand-amber-heat: #f8d359;
+  --brand-deep-violet: #1f2a34;
+
+  --brand-bg-900: #fff5dc;
+  --brand-bg-800: #f9edcd;
+  --brand-bg-700: #f1e1bd;
+  --brand-fg-100: #1f2a34;
+  --brand-fg-200: #2f3e4a;
+  --brand-fg-300: #4f5f6f;
+
+  --brand-radius-sm: 8px;
+  --brand-radius-md: 14px;
+  --brand-radius-lg: 24px;
+
+  --brand-gradient-ignition: linear-gradient(
+    135deg,
+    #6ec7f7 0%,
+    #5bbf8a 55%,
+    #f8d359 100%
+  );
+  --brand-shadow-glow: 0 16px 40px rgba(110, 199, 247, 0.28);
+  --brand-shadow-glow-strong: 0 24px 52px rgba(91, 191, 138, 0.34);
+  --brand-chart-track: rgba(255, 248, 230, 0.28);
+  --brand-chart-center-text: rgba(255, 248, 230, 0.95);
+  --brand-cta-text: #1a242b;
+
+  --brand-accent-electric: var(--brand-electric-blue);
+  --brand-accent-electric-soft: rgba(110, 199, 247, 0.22);
+  --brand-accent-warm: var(--brand-amber-heat);
+
+  --brand-card-soft: rgba(31, 42, 52, 0.92);
+  --brand-card-border: rgba(110, 199, 247, 0.32);
+  --brand-card-shadow: 0 28px 56px rgba(31, 42, 52, 0.32);
+  --brand-card-text: rgba(255, 248, 230, 0.95);
+
+  --brand-primary-cta-gradient: var(--brand-gradient-ignition);
+  --brand-primary-cta-text: var(--brand-cta-text);
+  --brand-primary-cta-shadow: var(--brand-shadow-glow);
+  --brand-primary-cta-hover-shadow: var(--brand-shadow-glow-strong);
+  --brand-primary-cta-hover-translate: translateY(-1px);
+
+  --brand-surface-card-bg: var(--brand-card-soft);
+  --brand-surface-card-border: var(--brand-card-border);
+  --brand-surface-card-shadow: var(--brand-card-shadow);
+  --brand-surface-helper-bg: rgba(91, 191, 138, 0.16);
+  --brand-surface-helper-hover-bg: rgba(91, 191, 138, 0.28);
+  --brand-card-radius: var(--brand-radius-lg);
+  --brand-button-radius: var(--brand-radius-md);
+
+  --brand-icon-badge-bg: rgba(248, 211, 89, 0.35);
+  --brand-icon-badge-color: #5b3f12;
+
+  --brand-pill-gradient: linear-gradient(
+    135deg,
+    var(--brand-amber-heat) 0%,
+    #f08b3e 45%,
+    var(--brand-electric-blue) 100%
+  );
+  --brand-pill-alt-gradient: linear-gradient(
+    135deg,
+    var(--brand-electric-blue) 0%,
+    #5bbf8a 100%
+  );
+  --brand-pill-contrast: #1f2a34;
+
+  --brand-border-highlight: rgba(248, 211, 89, 0.55);
+  --brand-border-glow: rgba(110, 199, 247, 0.45);
+
+  --brand-status-success: #5bbf8a;
+  --brand-status-error: var(--brand-crimson-red);
+  --brand-status-error-soft: rgba(194, 65, 54, 0.22);
+
+  --brand-input-bg: rgba(255, 249, 238, 0.94);
+  --brand-input-border: rgba(47, 62, 74, 0.18);
+  --brand-input-border-active: rgba(110, 199, 247, 0.55);
+  --brand-input-text: var(--brand-fg-100);
+  --brand-input-placeholder: rgba(31, 42, 52, 0.52);
+  --brand-focus-ring: 0 0 0 2px rgba(110, 199, 247, 0.45);
+  --brand-focus-glow: 0 0 18px rgba(248, 211, 89, 0.35);
+
+  --brand-modal-backdrop: rgba(31, 42, 52, 0.65);
+  --brand-modal-surface: #fff9ef;
+  --brand-modal-border: rgba(31, 42, 52, 0.12);
+  --brand-modal-shadow: 0 24px 54px rgba(31, 42, 52, 0.25);
+  --brand-modal-radius: var(--brand-radius-lg);
+
+  --brand-countdown-digit: var(--brand-amber-heat);
+  --brand-countdown-label: rgba(255, 245, 220, 0.82);
+}
+
+[data-site-theme="southpark"] body {
+  font-family: 'Inter', 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  color: var(--brand-fg-100);
+  background:
+    radial-gradient(circle at 14% 6%, rgba(248, 211, 89, 0.42), transparent 45%),
+    radial-gradient(circle at 82% 0%, rgba(110, 199, 247, 0.38), transparent 52%),
+    linear-gradient(180deg, #c7e6f6 0%, #bfe0ef 32%, #bcd7c3 55%, #fff5dc 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+[data-site-theme="southpark"] .container {
+  max-width: min(1180px, 92vw);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+[data-site-theme="southpark"] .container-fluid {
+  padding-left: clamp(16px, 4vw, 48px);
+  padding-right: clamp(16px, 4vw, 48px);
+}
+
+[data-site-theme="southpark"] h1,
+[data-site-theme="southpark"] h2,
+[data-site-theme="southpark"] h3,
+[data-site-theme="southpark"] h4,
+[data-site-theme="southpark"] h5,
+[data-site-theme="southpark"] h6 {
+  font-family: 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  color: var(--brand-fg-100);
+  letter-spacing: 0.01em;
+}
+
+[data-site-theme="southpark"] a {
+  color: var(--brand-electric-blue);
+  text-decoration: none;
+}
+
+[data-site-theme="southpark"] a:hover,
+[data-site-theme="southpark"] a:focus {
+  color: #2a87c6;
+  text-decoration: underline;
+}
+
+[data-site-theme="southpark"] input,
+[data-site-theme="southpark"] select,
+[data-site-theme="southpark"] textarea {
+  background: var(--brand-input-bg);
+  border: 1px solid var(--brand-input-border);
+  color: var(--brand-input-text);
+  border-radius: var(--brand-button-radius);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+[data-site-theme="southpark"] input::placeholder,
+[data-site-theme="southpark"] textarea::placeholder {
+  color: var(--brand-input-placeholder);
+}
+
+[data-site-theme="southpark"] input:focus,
+[data-site-theme="southpark"] select:focus,
+[data-site-theme="southpark"] textarea:focus {
+  outline: 2px solid transparent;
+  border-color: var(--brand-input-border-active);
+  box-shadow: var(--brand-focus-ring), var(--brand-focus-glow);
+}
+
+[data-site-theme="southpark"] button:focus-visible,
+[data-site-theme="southpark"] a:focus-visible {
+  outline: 2px solid var(--brand-accent-electric);
+  outline-offset: 3px;
+}
+
+[data-site-theme="southpark"] .primary-button {
+  background: var(--brand-primary-cta-gradient);
+  border: none;
+  border-radius: var(--brand-button-radius);
+  color: var(--brand-primary-cta-text);
+  box-shadow: var(--brand-primary-cta-shadow);
+  transition: transform 0.16s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+[data-site-theme="southpark"] .primary-button:hover,
+[data-site-theme="southpark"] .primary-button:focus-visible {
+  transform: var(--brand-primary-cta-hover-translate);
+  box-shadow: var(--brand-primary-cta-hover-shadow);
+}
+
+[data-site-theme="southpark"] .sticky-cta__button,
+[data-site-theme="southpark"] .primary-button,
+[data-site-theme="southpark"] .curiosity-teaser__cta {
+  filter: brightness(1);
+  will-change: box-shadow, filter;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  [data-site-theme="southpark"] .sticky-cta__button,
+  [data-site-theme="southpark"] .primary-button,
+  [data-site-theme="southpark"] .curiosity-teaser__cta {
+    animation: southparkGlowPulse 8s ease-in-out infinite;
+  }
+
+  [data-site-theme="southpark"] .sticky-cta__button::after,
+  [data-site-theme="southpark"] .primary-button::after,
+  [data-site-theme="southpark"] .curiosity-teaser__cta::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0));
+    transform: translateX(-130%);
+    pointer-events: none;
+    mix-blend-mode: screen;
+    animation: southparkButtonShimmer 5.5s ease-in-out infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-site-theme="southpark"] .sticky-cta__button,
+  [data-site-theme="southpark"] .primary-button,
+  [data-site-theme="southpark"] .curiosity-teaser__cta {
+    animation: none !important;
+    filter: none;
+  }
+
+  [data-site-theme="southpark"] .sticky-cta__button::after,
+  [data-site-theme="southpark"] .primary-button::after,
+  [data-site-theme="southpark"] .curiosity-teaser__cta::after {
+    display: none;
+  }
+}
+
+@keyframes southparkButtonShimmer {
+  0% {
+    transform: translateX(-130%);
+    opacity: 0;
+  }
+  35% {
+    opacity: 0.75;
+  }
+  55% {
+    transform: translateX(125%);
+    opacity: 0.45;
+  }
+  100% {
+    transform: translateX(145%);
+    opacity: 0;
+  }
+}
+
+@keyframes southparkGlowPulse {
+  0%,
+  25% {
+    box-shadow: var(--brand-primary-cta-shadow);
+    filter: brightness(1);
+  }
+  35% {
+    box-shadow: 0 24px 48px rgba(110, 199, 247, 0.35);
+    filter: brightness(1.05);
+  }
+  50% {
+    box-shadow: 0 18px 36px rgba(91, 191, 138, 0.32);
+    filter: brightness(0.95);
+  }
+  65% {
+    box-shadow: 0 26px 52px rgba(248, 211, 89, 0.4);
+    filter: brightness(1.08);
+  }
+  100% {
+    box-shadow: var(--brand-primary-cta-shadow);
+    filter: brightness(1);
+  }
+}
+
+[data-site-theme="southpark"] .status-card h1,
+[data-site-theme="southpark"] .status-card h2,
+[data-site-theme="southpark"] .status-card h3,
+[data-site-theme="southpark"] .status-card h4,
+[data-site-theme="southpark"] .status-card h5,
+[data-site-theme="southpark"] .status-card h6,
+[data-site-theme="southpark"] .stake-card h1,
+[data-site-theme="southpark"] .stake-card h2,
+[data-site-theme="southpark"] .stake-card h3,
+[data-site-theme="southpark"] .stake-card h4,
+[data-site-theme="southpark"] .stake-card h5,
+[data-site-theme="southpark"] .stake-card h6,
+[data-site-theme="southpark"] .widget-card h1,
+[data-site-theme="southpark"] .widget-card h2,
+[data-site-theme="southpark"] .widget-card h3,
+[data-site-theme="southpark"] .widget-card h4,
+[data-site-theme="southpark"] .widget-card h5,
+[data-site-theme="southpark"] .widget-card h6,
+[data-site-theme="southpark"] .brand-card h1,
+[data-site-theme="southpark"] .brand-card h2,
+[data-site-theme="southpark"] .brand-card h3,
+[data-site-theme="southpark"] .brand-card h4,
+[data-site-theme="southpark"] .brand-card h5,
+[data-site-theme="southpark"] .brand-card h6,
+[data-site-theme="southpark"] .status-card p,
+[data-site-theme="southpark"] .stake-card p,
+[data-site-theme="southpark"] .widget-card p,
+[data-site-theme="southpark"] .brand-card p,
+[data-site-theme="southpark"] .status-card li,
+[data-site-theme="southpark"] .stake-card li,
+[data-site-theme="southpark"] .widget-card li,
+[data-site-theme="southpark"] .brand-card li,
+[data-site-theme="southpark"] .status-card span,
+[data-site-theme="southpark"] .stake-card span,
+[data-site-theme="southpark"] .widget-card span,
+[data-site-theme="southpark"] .brand-card span {
+  color: var(--brand-card-text) !important;
+}
+
+[data-site-theme="southpark"] .status-card__price-value,
+[data-site-theme="southpark"] .status-metric__value,
+[data-site-theme="southpark"] .stake-card__headline {
+  color: rgba(248, 243, 220, 0.92);
+  text-shadow: 0 0 18px rgba(248, 211, 89, 0.4);
+}
+
+[data-site-theme="southpark"] .status-card__price-chip,
+[data-site-theme="southpark"] .status-chip,
+[data-site-theme="southpark"] .unit-chip {
+  background: rgba(248, 211, 89, 0.24);
+  color: #1f2a34;
+  border: 1px solid rgba(248, 243, 220, 0.4);
+}
+
+[data-site-theme="southpark"] .status-metric,
+[data-site-theme="southpark"] .stake-section,
+[data-site-theme="southpark"] .buy-group {
+  border-color: rgba(255, 245, 220, 0.16) !important;
+}
+
+[data-site-theme="southpark"] .countdown,
+[data-site-theme="southpark"] .countdown__value,
+[data-site-theme="southpark"] .countdown__label {
+  color: rgba(255, 245, 220, 0.9);
+}
+
+[data-site-theme="southpark"] .countdown__value {
+  color: var(--brand-countdown-digit);
+}
+
+
+
+[data-site-theme="southpark"] .unit-chip-button {
+  background: transparent;
+  color: var(--brand-card-text);
+  border-radius: 0;
+  border: none;
+  border-left: 1px solid rgba(110, 199, 247, 0.35);
+  box-shadow: none;
+  align-self: stretch;
+  padding-right: var(--buy-space-16);
+  padding-left: var(--buy-space-12);
+}
+
+[data-site-theme="southpark"] .unit-chip-button .unit-chip,
+[data-site-theme="southpark"] .unit-chip-button svg {
+  color: inherit;
+}
+
+[data-site-theme="southpark"] .balance-inline__unit {
+  border-radius: 999px;
+  border: 1px solid rgba(248, 243, 220, 0.4);
+  background: rgba(248, 211, 89, 0.24);
+  padding: 0 12px;
+  color: #1f2a34;
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 24px;
+  vertical-align: middle;
+}
+
+[data-site-theme="southpark"] .unit-chip-button .unit-chip {
+  border: none !important;
+  padding: 0 var(--buy-space-12) !important;
+  min-height: auto !important;
+  letter-spacing: 0.08em !important;
+  align-self: stretch;
+  display: inline-flex;
+  align-items: center;
+}
+
+[data-site-theme="southpark"] .brand-card .unit-chip,
+[data-site-theme="southpark"] .status-card .unit-chip,
+[data-site-theme="southpark"] .stake-card .unit-chip {
+  border-radius: 999px;
+  padding: 2px 12px;
+}
+
+[data-site-theme="southpark"] .asset-picker-popover {
+  background: rgba(20, 28, 36, 0.96) !important;
+  border: 1px solid rgba(110, 199, 247, 0.35) !important;
+  box-shadow: 0 30px 60px rgba(5, 7, 12, 0.65) !important;
+}
+
+[data-site-theme="southpark"] .asset-picker-popover__title,
+[data-site-theme="southpark"] .asset-picker-popover__symbol,
+[data-site-theme="southpark"] .asset-picker-popover__balance {
+  color: var(--brand-card-text) !important;
+}
+
+[data-site-theme="southpark"] .asset-picker-popover__name {
+  color: rgba(255, 248, 230, 0.72) !important;
+}
+
+[data-site-theme="southpark"] .asset-picker-popover__button {
+  color: var(--brand-card-text) !important;
+  border-radius: var(--brand-radius-sm) !important;
+  border: 1px solid transparent !important;
+}
+
+[data-site-theme="southpark"] .asset-picker-popover__button:hover,
+[data-site-theme="southpark"] .asset-picker-popover__button:focus-visible {
+  border-color: rgba(110, 199, 247, 0.45) !important;
+  background: rgba(110, 199, 247, 0.08) !important;
+}
+
+[data-site-theme="southpark"] .asset-picker-popover__button--active {
+  border-color: rgba(248, 211, 89, 0.65) !important;
+  background: rgba(248, 211, 89, 0.14) !important;
+}
+
+[data-site-theme="southpark"] .asset-picker-popover__icon {
+  background: rgba(110, 199, 247, 0.2) !important;
+  border: 1px solid rgba(110, 199, 247, 0.35) !important;
+}
+
+[data-site-theme="southpark"] .network-alert {
+  background: linear-gradient(160deg, rgba(194, 65, 54, 0.2), rgba(31, 42, 52, 0.92));
+  border: 1px solid rgba(194, 65, 54, 0.45);
+  color: rgba(255, 245, 220, 0.92);
+  box-shadow: 0 20px 40px rgba(194, 65, 54, 0.28);
+}
+
+[data-site-theme="southpark"] .network-alert__button {
+  background: rgba(110, 199, 247, 0.18);
+  border-color: rgba(110, 199, 247, 0.4);
+  color: rgba(255, 245, 220, 0.95);
+}
+
+[data-site-theme="southpark"] .stake-toggle__input:checked + .stake-toggle__track {
+  background: linear-gradient(135deg, #5bbf8a, #6ec7f7);
+}
+
+[data-site-theme="southpark"] .modal,
+[data-site-theme="southpark"] [role="dialog"] {
+  background: var(--brand-modal-surface);
+  border: 1px solid var(--brand-modal-border);
+  box-shadow: var(--brand-modal-shadow);
+  color: var(--brand-fg-100);
+}
+
+[data-site-theme="southpark"] .modal::backdrop,
+[data-site-theme="southpark"] [role="dialog"]::backdrop,
+[data-site-theme="southpark"] .need-eth-modal__backdrop,
+[data-site-theme="southpark"] .w3m-modal-backdrop {
+  background: var(--brand-modal-backdrop) !important;
+}
+
+[data-site-theme="southpark"] .footer {
+  background: #1f2a34;
+  color: rgba(255, 245, 220, 0.92);
+}
+
+[data-site-theme="southpark"] .about-section {
+  color: rgba(255, 245, 220, 0.92);
+}
+
+[data-site-theme="southpark"] .footer a,
+[data-site-theme="southpark"] .about-section a {
+  color: var(--brand-electric-blue);
+}
+
+[data-site-theme="southpark"] .legal-page {
+  background: linear-gradient(180deg, #fff9ef 0%, #f1e1bd 100%);
+  color: var(--brand-fg-200);
+}
+
+[data-site-theme="southpark"] .sticky-cta {
+  background: rgba(31, 42, 52, 0.92);
+  border: 1px solid rgba(248, 211, 89, 0.4);
+  box-shadow: 0 -12px 32px rgba(31, 42, 52, 0.35);
+}
+
+[data-site-theme="southpark"] .sticky-cta__button {
+  background: var(--brand-primary-cta-gradient);
+  color: var(--brand-primary-cta-text);
+}
+
+[data-site-theme="southpark"] .cookie-consent,
+[data-site-theme="southpark"] .form-alert {
+  background: rgba(31, 42, 52, 0.94);
+  border: 1px solid rgba(110, 199, 247, 0.35);
+  color: rgba(255, 245, 220, 0.9);
+}
+
+[data-site-theme="southpark"] .form-alert--success {
+  border-color: rgba(91, 191, 138, 0.4);
+}
+
+[data-site-theme="southpark"] .form-alert--error {
+  border-color: rgba(194, 65, 54, 0.38);
+}
+
+[data-site-theme="southpark"] .status-progress .progress-bar {
+  background: linear-gradient(90deg, #5bbf8a, #f8d359);
+}
+
+[data-site-theme="southpark"] .momentum-card {
+  background: rgba(31, 42, 52, 0.94);
+  border: 1px solid rgba(110, 199, 247, 0.32);
+  box-shadow: 0 24px 50px rgba(31, 42, 52, 0.32);
+}
+
+[data-site-theme="southpark"] .momentum-card__eyebrow {
+  color: rgba(248, 211, 89, 0.9);
+}
+
+[data-site-theme="southpark"] .momentum-card__value {
+  color: rgba(255, 245, 220, 0.92);
+}
+
+[data-site-theme="southpark"] .tokenomics-chart__center-label {
+  color: var(--brand-fg-100);
+}
+
+[data-site-theme="southpark"] .tokenomics-chart__center-value {
+  color: var(--brand-amber-heat);
+}
+
+[data-site-theme="southpark"] .contact-form,
+[data-site-theme="southpark"] .email-capture {
+  background: rgba(255, 249, 238, 0.96);
+  border: 1px solid rgba(31, 42, 52, 0.12);
+}
+
+[data-site-theme="southpark"] .email-capture__button {
+  background: var(--brand-primary-cta-gradient);
+  color: var(--brand-primary-cta-text);
+}
+
+[data-site-theme="southpark"] .secondary-cta__link:hover,
+[data-site-theme="southpark"] .secondary-cta__link:focus-visible {
+  background: rgba(248, 211, 89, 0.3);
+  color: #1f2a34;
+}
+
+[data-site-theme="southpark"] .appkit-button,
+[data-site-theme="southpark"] appkit-button {
+  --wcm-font-family: 'Space Grotesk', 'Inter', sans-serif;
+  --wcm-color-fg-1: #1f2a34;
+  --wcm-color-fg-2: #3c4a57;
+  --wcm-color-bg-1: #fff9ef;
+  --wcm-color-accent: #5bbf8a;
+  --wcm-color-danger: #c24136;
+  --wcm-modal-width: min(420px, 92vw);
+}
+[data-site-theme="southpark"] .momentum-card h1,
+[data-site-theme="southpark"] .momentum-card h2,
+[data-site-theme="southpark"] .momentum-card h3,
+[data-site-theme="southpark"] .momentum-card h4,
+[data-site-theme="southpark"] .momentum-card h5,
+[data-site-theme="southpark"] .momentum-card h6,
+[data-site-theme="southpark"] .momentum-card p,
+[data-site-theme="southpark"] .momentum-card li,
+[data-site-theme="southpark"] .momentum-card span {
+  color: var(--brand-card-text) !important;
+}
+
+[data-site-theme="southpark"] .widget-card,
+[data-site-theme="southpark"] .ui-card,
+[data-site-theme="southpark"] .how-it-works,
+[data-site-theme="southpark"] .need-eth-modal,
+[data-site-theme="southpark"] .step,
+[data-site-theme="southpark"] .stepper,
+[data-site-theme="southpark"] .ui-card .brand-card__badge,
+[data-site-theme="southpark"] .buy-group__label,
+[data-site-theme="southpark"] .buy-group__value,
+[data-site-theme="southpark"] .form-notice,
+[data-site-theme="southpark"] .conversion-hint,
+[data-site-theme="southpark"] .amount-estimate,
+[data-site-theme="southpark"] .balance-inline__label,
+[data-site-theme="southpark"] .balance-inline__value,
+[data-site-theme="southpark"] .step-title,
+[data-site-theme="southpark"] .step-subtitle {
+  color: var(--brand-card-text) !important;
+}
+
+[data-site-theme="southpark"] .status-card,
+[data-site-theme="southpark"] .stake-card {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+[data-site-theme="southpark"] .connect-badge {
+  background: rgba(31, 42, 52, 0.92) !important;
+  border-color: rgba(110, 199, 247, 0.35) !important;
+  color: var(--brand-card-text) !important;
+  box-shadow: 0 18px 36px rgba(31, 42, 52, 0.32);
+}
+
+[data-site-theme="southpark"] .connect-badge__status,
+[data-site-theme="southpark"] .connect-badge__network,
+[data-site-theme="southpark"] .connect-badge__value {
+  color: var(--brand-card-text) !important;
+}
+
+[data-site-theme="southpark"] .connect-badge__status-icon svg {
+  stroke: var(--brand-card-text);
+}
+
+[data-site-theme="southpark"] .connect-badge--alert {
+  background: rgba(194, 65, 54, 0.18) !important;
+  border-color: rgba(194, 65, 54, 0.55) !important;
+}
+
+[data-site-theme="southpark"] .connect-badge--alert .connect-badge__status,
+[data-site-theme="southpark"] .connect-badge--alert .connect-badge__status-icon {
+  color: var(--brand-status-error) !important;
+}
+
+[data-site-theme="southpark"] .stake-toggle__track {
+  background: rgba(12, 18, 26, 0.85);
+  box-shadow:
+    inset 0 0 0 1px rgba(110, 199, 247, 0.5),
+    0 4px 12px rgba(5, 7, 12, 0.65);
+}
+
+[data-site-theme="southpark"] .stake-toggle__thumb {
+  background: rgba(255, 248, 230, 1);
+  box-shadow:
+    0 2px 8px rgba(5, 7, 12, 0.55),
+    inset 0 0 0 1px rgba(123, 115, 73, 0.4);
+}
+
+[data-site-theme="southpark"] .stake-toggle__input:checked + .stake-toggle__track {
+  background: linear-gradient(135deg, #4fe08f 0%, #6ec7f7 100%);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 248, 230, 0.6),
+    0 4px 14px rgba(78, 199, 170, 0.45);
+}
+
+[data-site-theme="southpark"] .stake-toggle__label {
+  color: rgba(255, 248, 230, 0.92);
+  font-weight: 600;
+}
+
+[data-site-theme="southpark"] .presale-faq,
+[data-site-theme="southpark"] .presale-faq__trigger,
+[data-site-theme="southpark"] .presale-faq__answer,
+[data-site-theme="southpark"] .presale-faq__description,
+[data-site-theme="southpark"] .presale-faq__title {
+  color: var(--brand-card-text) !important;
+}
+
+[data-site-theme="southpark"] .presale-faq__badge,
+[data-site-theme="southpark"] .presale-faq__icon {
+  color: var(--brand-card-text);
+  background: rgba(248, 211, 89, 0.2);
+}
+
+[data-site-theme="southpark"] .presale-faq__item {
+  background: rgba(31, 42, 52, 0.85) !important;
+  border-color: rgba(110, 199, 247, 0.28) !important;
+}
+
+[data-site-theme="southpark"] .presale-faq__item--open {
+  border-color: rgba(248, 211, 89, 0.55) !important;
+  background: rgba(31, 42, 52, 0.92) !important;
+}
+
+[data-site-theme="southpark"] #tokenomics,
+[data-site-theme="southpark"] #tokenomics h2,
+[data-site-theme="southpark"] #tokenomics h3,
+[data-site-theme="southpark"] #tokenomics p,
+[data-site-theme="southpark"] #tokenomics li,
+[data-site-theme="southpark"] #tokenomics span {
+  color: var(--brand-card-text) !important;
+}
+
+[data-site-theme="southpark"] #tokenomics {
+  background: radial-gradient(circle at 50% -20%, rgba(110, 199, 247, 0.18), transparent 55%),
+    radial-gradient(circle at 0% 10%, rgba(248, 211, 89, 0.12), transparent 60%),
+    #040609;
+}
+
+[data-site-theme="southpark"] #tokenomics h2 {
+  color: rgba(255, 248, 230, 0.95) !important;
+  text-shadow: 0 0 18px rgba(248, 211, 89, 0.35);
+}
+
+[data-site-theme="southpark"] #tokenomics h3,
+[data-site-theme="southpark"] .tokenomics-intro {
+  color: rgba(255, 248, 230, 0.8) !important;
+}
+
+[data-site-theme="southpark"] #tokenomics h4 {
+  color: rgba(255, 248, 230, 0.78) !important;
+}
+
+[data-site-theme="southpark"] #tokenomics .lead {
+  color: rgba(255, 248, 230, 0.7) !important;
+}
+
+[data-site-theme="southpark"] #tokenomics .tokenomics-figure__value,
+[data-site-theme="southpark"] .tokenomics-chart__center-value {
+  color: #f8d359 !important;
+  text-shadow: 0 0 14px rgba(248, 211, 89, 0.45);
+}
+
+[data-site-theme="southpark"] .tokenomics-details-label {
+  color: rgba(255, 248, 230, 0.7) !important;
+}
+
+[data-site-theme="southpark"] .tokenomics-details-item::before {
+  color: var(--brand-amber-heat) !important;
+}
+
+[data-site-theme="southpark"] .tokenomics-chart__center-label {
+  color: rgba(255, 248, 230, 0.82) !important;
+  text-shadow: 0 0 14px rgba(248, 211, 89, 0.4);
+}
+[data-site-theme="southpark"] .tokenomics-chart__center-value {
+  color: #f8d359 !important;
+  text-shadow: 0 0 18px rgba(248, 211, 89, 0.55);
+}
+[data-site-theme="southpark"] {
+  --field-bg: rgba(14, 26, 38, 0.98);
+  --field-border: rgba(83, 122, 152, 0.65);
+  --field-border-focus: rgba(110, 199, 247, 0.85);
+  --field-shadow: inset 0 0 0 1px rgba(20, 48, 70, 0.85), 0 18px 34px rgba(7, 10, 14, 0.65);
+  --field-input-color: rgba(255, 245, 220, 0.95);
+  --field-input-placeholder: rgba(255, 245, 220, 0.45);
+  --field-input-disabled-color: rgba(255, 245, 220, 0.35);
+  --field-addon-bg: rgba(17, 34, 48, 0.98);
+  --field-addon-border: rgba(83, 122, 152, 0.65);
+  --field-addon-color: rgba(255, 245, 220, 0.95);
+}
+
+[data-site-theme="southpark"] .field-group {
+  background: var(--field-bg) !important;
+  border-color: var(--field-border) !important;
+  box-shadow: var(--field-shadow) !important;
+}
+
+[data-site-theme="southpark"] .field-group:focus-within {
+  border-color: var(--field-border-focus) !important;
+  box-shadow:
+    0 0 0 2px rgba(110, 199, 247, 0.35),
+    0 18px 34px rgba(7, 10, 14, 0.65) !important;
+}
+
+[data-site-theme="southpark"] .field-input {
+  color: var(--field-input-color) !important;
+  -webkit-text-fill-color: var(--field-input-color) !important;
+}
+
+[data-site-theme="southpark"] .field-input::placeholder {
+  color: var(--field-input-placeholder) !important;
+}
+
+[data-site-theme="southpark"] .field-addon,
+[data-site-theme="southpark"] .field-unit {
+  background: var(--field-addon-bg) !important;
+  color: var(--field-addon-color) !important;
+  border-color: var(--field-addon-border) !important;
+}
+
+html.token-suck .field-group {
+  background-color: #0c1f2d !important;
+  border-color: rgba(83, 122, 152, 0.65) !important;
+  box-shadow:
+    inset 0 0 0 1px rgba(20, 48, 70, 0.65),
+    0 18px 34px rgba(5, 10, 14, 0.55) !important;
+}
+
+html.token-suck .field-input {
+  background: transparent !important;
+  border: none !important;
+  color: rgba(255, 245, 220, 0.96) !important;
+  -webkit-text-fill-color: rgba(255, 245, 220, 0.96) !important;
+}
+
+html.token-suck .field-input::placeholder {
+  color: rgba(255, 245, 220, 0.48) !important;
+}
+
+html.token-suck .field-addon,
+html.token-suck .field-unit {
+  background-color: #0b1924 !important;
+  color: rgba(255, 245, 220, 0.96) !important;
+  border-color: rgba(83, 122, 152, 0.65) !important;
+}
